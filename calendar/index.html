@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.google.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <title>Calendar</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="control">
+                <div class="control-buttons">
+
+                    <div class="popup-header">
+                        <div class="frame1">
+                            <i onclick="closePopupTwo()" class=" close_popup  fa-solid fa-xmark"
+                                style="color: #A4A4A4"></i>
+                        </div>
+                        <div class="frame2">
+                            <input class="frame2-input" placeholder="Событие">
+                        </div>
+                        <div class="frame6">
+                            <div class="extra-button-frame6">
+                                <button class="button-title-frame6">Создать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="addPopupTwo()" class="main-button">Добавить</button>
+
+
+                    <button class="main-button">
+                        <a href="#" onclick="location.reload(); return false;">
+                            Обновить
+                        </a>
+                    </button>
+
+                </div>
+                <div class="input-area">
+                    <div class="icon">
+                        <i class='fa-solid fa-magnifying-glass' style="color: #A4A4A4;"></i>
+                    </div>
+
+                    <input placeholder="Поиск">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="calendar-wrapper">
+        <div class="top-row">
+            <div class="month-control">
+
+                <button id="btnPrev" type="button">
+                    <i class="fa-solid fa-caret-left"></i>
+                </button>
+
+                <div id="text" class="text"></div>
+
+                <button id="btnNext" type="button">
+                    <i class="fa-solid fa-caret-right"></i>
+                </button>
+            </div>
+            <div class="update-text">
+                <input class="update" type='button' onclick='window.location.reload()' value='Сегодня' />
+            </div>
+
+        </div>
+
+
+
+        <div id="divCal"> </div>
+
+
+
+
+        <div class="cell-popup">
+            <div class="popup-content">
+                <div class="frame1">
+                    <i onclick="closePopup()" class=" close_popup  fa-solid fa-xmark" style="color: #A4A4A4"></i>
+                </div>
+
+                <div class="frame2">
+                    <input class="frame2-input" placeholder="Событие">
+                </div>
+
+                <div class="frame3">
+                    <input class="frame3-input" type="date" placeholder="День, месяц, год">
+                </div>
+
+                <div class="frame4">
+                    <input class="frame4-input" placeholder="Имена участников">
+                </div>
+
+                <div class="frame5">
+                    <input class="frame5-input" placeholder="Описание">
+                </div>
+
+                <div class="frame6">
+
+                    <div class="extra-button-frame6">
+                        <button class="button-title-frame6">Готово</button>
+                    </div>
+
+                    <div class="extra-button-frame6">
+                        <button class="button-title-frame6">Удалить</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+</body>
+
+</html>
